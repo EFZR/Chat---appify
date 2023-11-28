@@ -1,0 +1,56 @@
+.contact-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  background-color: var(--primary);
+  transition: all 0.1s ease-in-out;
+}
+
+.contact-menu:hover {
+  cursor: pointer;
+  background-color: var(--primary-dark);
+}
+
+.contact-menu .contact-info {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-menu .contact-info .icon {
+  margin: 0;
+}
+
+.contact-menu .contact-info .icon:hover {
+  cursor: pointer;
+  background-color: var(--secondary-blue);
+  color: var(--primary);
+}
+
+.contact-menu div span {
+  font-size: 1.5rem;
+  color: var(--third);
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .contact-menu div span {
+    font-size: 1.7rem;
+  }
+}
+
+.contact-menu .state {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--secondary-blue);
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .contact-menu .state {
+    font-size: 1.2rem;
+  }
+}

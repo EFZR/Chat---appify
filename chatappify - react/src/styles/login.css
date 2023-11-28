@@ -1,0 +1,150 @@
+.login-container {
+  width: 45rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 5rem;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    border: 0;
+  }
+}
+
+.login-container h1 {
+  font-size: 5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: var(--secondary-blue);
+  margin: 0;
+}
+
+.login-container .input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.login-container .input-field {
+  position: relative;
+}
+
+.login-container .login-input {
+  all: unset;
+  width: 20rem;
+  font-size: 1.3rem;
+  padding: 1rem;
+  border: solid 1px var(--third-light);
+  border-radius: 0.5rem;
+  display: block;
+
+  &::placeholder {
+    color: transparent;
+    user-select: none;
+  }
+}
+
+.login-container .login-label {
+  font-size: 1.5rem;
+  color: var(--third-light);
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  background-color: var(--primary);
+  cursor: text;
+  transition: all 0.1s ease-in-out;
+  display: block;
+  user-select: none;
+}
+
+.login-container .login-input:focus,
+.login-container .login-input:not(:placeholder-shown) {
+  border-color: var(--secondary-dark-blue);
+
+  ~ .login-label {
+    top: 0;
+    color: var(--secondary-dark-blue);
+    font-size: 1.2rem;
+  }
+}
+
+.login-container .login-submit {
+  all: unset;
+  background-color: var(--secondary-light-blue);
+  font-size: 1.8rem;
+  color: var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.1s ease-in-out;
+}
+
+.login-container .login-submit:hover {
+  cursor: pointer;
+  background-color: var(--secondary-blue);
+}
+
+.login-container a {
+  display: block;
+  align-self: flex-end;
+  text-decoration: none;
+  color: var(--secondary-blue);
+  font-size: 1.3rem;
+}
+
+.login-container a:last-child {
+  align-self: center;
+  font-size: 1.5rem;
+  margin: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.error-container {
+  width: 25rem;
+  margin: 0;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@media (max-width: 768px) {
+  .error-container {
+    background-color: var(--fourth);
+    top: 10%;
+  }
+}
+
+.error-text {
+  color: var(--fourth);
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .error-text {
+    color: var(--primary);
+  }
+}
